@@ -5,9 +5,11 @@ import time
 from CarControl.SingleActions import *
 
 
+
+print('Running program...')
 time.sleep(4)
 # keyboard.write('jason is a big meme')
 # keyboard.press_and_release('enter')
 # print('jason is a big meme')
-print('driving forward for 2 seconds')
-forward(2)
+print('Powersliding.')
+powerslide(3)
