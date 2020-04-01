@@ -1,6 +1,6 @@
-#Single Key Actions
+#State Manager
 #
-#This file controls every base action possible with default controls in Rocket League
+#This file controls a state manager for the buttons of the car
 
 import keyboard
 import mouse
@@ -62,6 +62,13 @@ def powerslide(state):
 
 def runCar():
 
+	#Multiple key actions
+	# if __ and ___
+
+
+
+
+	#Single actions
 	if driveForward:
 		keyboard.press('w')
 	else:
