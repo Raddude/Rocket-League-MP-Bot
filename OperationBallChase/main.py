@@ -4,12 +4,13 @@ import keyboard
 import time
 from CarControl.StateManager import *
 
+framerate = 20
+sleep_time = 1/framerate
 
 
-print('Running program...')
-time.sleep(4)
-# keyboard.write('jason is a big meme')
-# keyboard.press_and_release('enter')
-# print('jason is a big meme')
-print('Powersliding.')
-powerslide(3)
+
+while(True):
+
+	runCar()
+
+	time.sleep(sleep_time)
