@@ -4,3 +4,4 @@ This is an attempt at making a multiplayer Rocket League bot by using OpenCV and
 
 OpenCV page: https://pypi.org/project/opencv-python/
 Keyboard page: https://pypi.org/project/keyboard/
+Mouse page: https://pypi.org/project/mouse/
