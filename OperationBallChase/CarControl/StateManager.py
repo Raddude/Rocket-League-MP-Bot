@@ -6,10 +6,10 @@ import keyboard
 import mouse
 import time
 
-driveForward = False
-driveBackward = False
-turnLeft = False
-turnRight = False
+drivingForward = False
+drivingBackward = False
+turningLeft = False
+turningRight = False
 jumping = False
 boosting = False
 sliding = False
@@ -30,19 +30,19 @@ sliding = False
 
 
 def setForward(state):
-	driveForward = state
+	drivingForward = state
 	return driveForward
 
 def setBackward(state):
-	driveBackward = state
+	drivingBackward = state
 	return driveBackward
 
 def turnLeft(state):
-	turnLeft = state
+	turningLeft = state
 	return turnLeft
 
 def turnRight(state):
-	turnRight = state
+	turningRight = state
 	return turnRight
 
 def jump(state):
@@ -55,6 +55,7 @@ def boost(state):
 
 def powerslide(state):
 	sliding = state
+	return sliding
 
 
 	
@@ -69,25 +70,25 @@ def runCar():
 
 
 	#Single actions
-	if driveForward:
+	if drivingForward:
 		keyboard.press('w')
 	else:
 		keyboard.release('w')
 
 
-	if driveBackward:
+	if drivingBackward:
 		keyboard.press('s')
 	else:
 		keyboard.release('s')
 
 		
-	if turnLeft:
+	if turningLeft:
 		keyboard.press('l')
 	else:
 		keyboard.release('l')
 
 
-	if turnRight:
+	if turningRight:
 		keyboard.press('r')
 	else:
 		keyboard.release('r')
@@ -105,7 +106,7 @@ def runCar():
 		mouse.release('left')
 
 
-	if powerslide:
+	if sliding:
 		keyboard.press('shift')
 	else:
 		keyboard.release('shift')
