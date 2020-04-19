@@ -29,31 +29,38 @@ sliding = False
 
 
 
-def setForward(state):
+def setForward(state=False):
+	global drivingForward
 	drivingForward = state
-	return driveForward
+	return drivingForward
 
-def setBackward(state):
+def setBackward(state=False):
+	global drivingBackward
 	drivingBackward = state
-	return driveBackward
+	return drivingBackward
 
-def turnLeft(state):
+def turnLeft(state=False):
+	global turningLeft
 	turningLeft = state
-	return turnLeft
+	return turningLeft
 
-def turnRight(state):
+def turnRight(state=False):
+	global turningRight
 	turningRight = state
-	return turnRight
+	return turningRight
 
-def jump(state):
+def setJump(state=False):
+	global jumping
 	jumping = state
 	return jumping
 
-def boost(state):
+def setBoost(state=False):
+	global boosting
 	boosting = state
 	return boosting
 
-def powerslide(state):
+def setPowerslide(state=False):
+	global sliding
 	sliding = state
 	return sliding
 
@@ -70,43 +77,43 @@ def runCar():
 
 
 	#Single actions
-	if drivingForward:
+	if drivingForward == True:
 		keyboard.press('w')
 	else:
 		keyboard.release('w')
 
 
-	if drivingBackward:
+	if drivingBackward == True:
 		keyboard.press('s')
 	else:
 		keyboard.release('s')
 
 		
-	if turningLeft:
+	if turningLeft == True:
 		keyboard.press('l')
 	else:
 		keyboard.release('l')
 
 
-	if turningRight:
+	if turningRight == True:
 		keyboard.press('r')
 	else:
 		keyboard.release('r')
 
 
-	if jumping:
+	if jumping == True:
 		mouse.press('right')
 	else:
 		mouse.release('right')
 
 
-	if boosting:
+	if boosting == True:
 		mouse.press('left')
 	else:
 		mouse.release('left')
 
 
-	if sliding:
+	if sliding == True:
 		keyboard.press('shift')
 	else:
 		keyboard.release('shift')
